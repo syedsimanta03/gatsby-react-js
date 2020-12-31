@@ -1,20 +1,18 @@
-import { Link } from "gatsby"
 import React from "react"
 import styled from "styled-components"
+import { themes } from "../styles/ColorStyles";
+import { H1, MediumText } from './../styles/TextStyles';
 
 const HeroSection = () => {
   return (
     <Wrapper>
       <ContentWrapper>
         <TextWrapper>
-          <h1>Design and code React apps</h1>
-          <p>
+          <Title>Design <br/> and code React apps</Title>
+          <Description>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
-            iusto, aliquam beatae accusantium sit id voluptates perferendis
-            autem. Consequatur, architecto? Optio tempora iste, reiciendis
-            nostrum corrupti porro consequuntur nihil. Hic?
-          </p>
-          <Link to="/page-2">Go to next page</Link>
+            iusto, aliquam beatae accusantium sit id voluptates
+          </Description>
         </TextWrapper>
       </ContentWrapper>
     </Wrapper>
@@ -34,4 +32,15 @@ const ContentWrapper = styled.div`
 
 const TextWrapper = styled.div`
   max-width: 360px;
+  display: grid;
+  gap: 30px;
 `
+
+const Title = styled(H1)`
+  color: ${themes.dark.text1};
+`
+
+const Description = styled(MediumText)`
+
+`
+
